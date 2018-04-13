@@ -2,8 +2,49 @@
 <html>
 <head>
   <title>Music Visualiser</title>
+  <style type="text/css">
+    #mp3_player{width: 500px; height: 60px; background-color: #000; padding: 5px; margin: 50px auto;
+    }
+    #audio_box{width: 500px; background-color: #000;
+    }
+    canvas{ width: 500px; height: 30px; background-color: #002D3C;
+    }
+  </style>
 </head>
 <body>
+  <!-- <audio id="heat" src="audio/WarmItUp.mp3" autobuffer autoloop loop controls></audio> -->
 
+  <div id="mp3_player">
+    <div id="audio_box"></div>
+    <canvas id="analyzer"></canvas>
+  </div>
+
+  <script type="text/javascript" charset="utf-8" async defer>
+    // window.onload = function() {
+    //   var ctx = new AudioContext();
+    //   var audio = document.getElementById('heat');
+    //   // audio.crossOrigin = "anonymous";
+    //   var audioSrc = ctx.createMediaElementSource(audio);
+    //   var analyser = ctx.createAnalyser();
+    //   // we have to connect the MediaElementSource with the analyser
+    //   audioSrc.connect(analyser);
+    //   // we could configure the analyser: e.g. analyser.fftSize (for further infos read the spec)
+
+    //   // frequencyBinCount tells you how many values you'll receive from the analyser
+    //   var frequencyData = new Uint8Array(analyser.frequencyBinCount);
+
+    //   // we're ready to receive some data!
+    //   // loop
+    //   function renderFrame() {
+    //     requestAnimationFrame(renderFrame);
+    //     // update data in frequencyData
+    //     analyser.getByteFrequencyData(frequencyData);
+    //     // render frame based on values in frequencyData
+    //     // console.log(frequencyData)
+    //   }
+    //   audio.start();
+    //   renderFrame();
+    // };
+  </script>
 </body>
 </html>
